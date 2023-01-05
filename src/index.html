@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../dist/output.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body class="bg-white-bone font-poppins" id="right-scrool">
+        
+        <!-- Header -->
+        <div class="w-full h-[70px] bg-white-bone flex items-center px-8 justify-between" id="navbar">
+            <h1 class="text-2xl font-bold">Traveling</h1>
+            <div class="hidden lg:block">
+                <ul class="flex items-center gap-6">
+                    <li class="px-2">
+                        <a href="#" class="text-sm">Destinations</a>
+                    </li>
+                    <li class="px-2">
+                        <a href="#" class="text-sm">Hotels</a>
+                    </li>
+                    <li class="px-2">
+                        <a href="#" class="text-sm">Flights</a>
+                    </li>
+                    <li class="px-2">
+                        <a href="#" class="text-sm">Bookings</a>
+                    </li>
+                    <li class="bg-white rounded-full items-center" id="searchGroup">
+                        <input class="outline-none text-sm mx-2 hidden bg-transparent" id="input" placeholder="Search Destination" />
+                        <div class="hidden" id="iconClose" onclick="closeSearch()">
+                            <i class="fa-regular fa-circle-xmark"></i>
+                        </div>
+                        <i class="fa-solid fa-magnifying-glass text-xs p-4" id="iconSearch" onclick="searchButton()"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="block lg:hidden">
+                <div class="flex gap-4">
+                    <div class="">
+                        <div class="border-b-[3px] px-4 my-2 border-black"></div>
+                        <div class="border-b-[3px] px-4 my-2 border-black"></div>
+                        <div class="border-b-[3px] px-4 my-2 border-black"></div>
+                    </div>
+               </div>
+            </div>
+        </div>
+
+        <!-- Javascript -->
+        <script>
+
+            window.onscroll = function() {
+                scrollFunction()
+            }
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+                    document.getElementById("navbar").style.background = "white"
+                    document.getElementById("navbar").style.position = "fixed"
+                } else {
+                    document.getElementById("navbar").style.background = "#f6f2ea"
+                }
+            }
+
+            function searchButton() {
+                document.getElementById("searchGroup").style.display = 'flex'
+                document.getElementById("searchGroup").style.padding = '8px'
+                document.getElementById("input").style.display = 'flex'
+                document.getElementById("input").style.width = '300px'
+                document.getElementById("iconSearch").style.paddingRight = '8px'
+                document.getElementById("iconSearch").style.paddingBottom = '0px'
+                document.getElementById("iconSearch").style.paddingTop = '0px'
+                document.getElementById("iconSearch").style.paddingLeft = '0px'
+                document.getElementById("iconSearch").style.display = 'none'
+                document.getElementById("iconClose").style.display = 'block'
+                document.getElementById("iconClose").style.paddingRight = '8px'
+            }
+
+            function closeSearch() {
+                document.getElementById("input").style.display = 'none'
+                document.getElementById("iconClose").style.display = 'none'
+                document.getElementById("iconSearch").style.display = 'block'
+                document.getElementById("iconSearch").style.padding = '8px'
+            }
+
+        </script>
+
+    </body>
+</html>
