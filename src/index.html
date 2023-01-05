@@ -13,28 +13,28 @@
     <body class="bg-white-bone font-poppins" id="right-scrool">
         
         <!-- Header -->
-        <div class="w-full h-[70px] bg-white-bone flex items-center px-8 justify-between" id="navbar">
-            <h1 class="text-2xl font-bold">Traveling</h1>
+        <div class="w-full h-[70px] bg-transparent text-white flex items-center px-8 justify-between fixed" id="navbar">
+            <h1 class="text-2xl font-bold" id="title">Traveling</h1>
             <div class="hidden lg:block">
                 <ul class="flex items-center gap-6">
                     <li class="px-2">
-                        <a href="#" class="text-sm">Destinations</a>
+                        <a href="#" class="text-sm" id="link-navbar1">Destinations</a>
                     </li>
                     <li class="px-2">
-                        <a href="#" class="text-sm">Hotels</a>
+                        <a href="#" class="text-sm" id="link-navbar2">Hotels</a>
                     </li>
                     <li class="px-2">
-                        <a href="#" class="text-sm">Flights</a>
+                        <a href="#" class="text-sm" id="link-navbar3">Flights</a>
                     </li>
                     <li class="px-2">
-                        <a href="#" class="text-sm">Bookings</a>
+                        <a href="#" class="text-sm" id="link-navbar4">Bookings</a>
                     </li>
-                    <li class="bg-white rounded-full items-center" id="searchGroup">
+                    <li class="bg-white-bone text-black rounded-full items-center" id="searchGroup">
                         <input class="outline-none text-sm mx-2 hidden bg-transparent" id="input" placeholder="Search Destination" />
                         <div class="hidden" id="iconClose" onclick="closeSearch()">
                             <i class="fa-regular fa-circle-xmark"></i>
                         </div>
-                        <i class="fa-solid fa-magnifying-glass text-xs p-4" id="iconSearch" onclick="searchButton()"></i>
+                        <i class="fa-solid fa-magnifying-glass text-xs p-4 text-black" id="iconSearch" onclick="searchButton()"></i>
                     </li>
                 </ul>
             </div>
@@ -49,6 +49,16 @@
             </div>
         </div>
 
+        <!-- Hero -->
+        <div class="w-full h-screen bg-cover bg-center" style="background-image: url('../assets/background/background.png');">
+            <div class="container mx-auto px-8 flex justify-start items-center h-full">
+                <div class="w-2/4 bg-teal-500">
+                    <h1>Hallo</h1>
+                </div>
+            </div>
+        </div>
+        <h1>Hallo</h1>
+
         <!-- Javascript -->
         <script>
 
@@ -58,10 +68,21 @@
 
             function scrollFunction() {
                 if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-                    document.getElementById("navbar").style.background = "white"
-                    document.getElementById("navbar").style.position = "fixed"
-                } else {
                     document.getElementById("navbar").style.background = "#f6f2ea"
+                    document.getElementById("link-navbar1").style.color = "black"
+                    document.getElementById("link-navbar2").style.color = "black"
+                    document.getElementById("link-navbar3").style.color = "black"
+                    document.getElementById("link-navbar4").style.color = "black"
+                    document.getElementById("title").style.color = "black"
+                    document.getElementById("searchGroup").style.background = "white"
+                } else {
+                    document.getElementById("navbar").style.background = "transparent"
+                    document.getElementById("searchGroup").style.background = "#f6f2ea"
+                    document.getElementById("link-navbar1").style.color = "#f6f2ea"
+                    document.getElementById("link-navbar2").style.color = "#f6f2ea"
+                    document.getElementById("link-navbar3").style.color = "#f6f2ea"
+                    document.getElementById("link-navbar4").style.color = "#f6f2ea"
+                    document.getElementById("title").style.color = "#f6f2ea"
                 }
             }
 
