@@ -66,10 +66,10 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Video -->
         <div class="w-screen h-screen fixed bg-black/80 top-0 justify-center items-center backdrop-blur-sm hidden" id="video">
-            <video controls width="600" height="auto">
+            <video controls width="600" height="auto" id="myVideo">
                 <source src="../assets/video/MENTAHAN MEME RICKROLL (HD).mp4" type="video/mp4">
             </video>
             <button class="absolute top-6 right-[42px]" onclick="closeVideo()">
@@ -131,6 +131,13 @@
 
             function closeVideo() {
                 document.getElementById("video").style.display = "none"
+                myVideo()
+            }
+
+            function myVideo() {
+                var myVideo = document.querySelector("#myVideo")
+                myVideo.pause();
+                myVideo.currentTime = 0
             }
 
         </script>
