@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'white-bone' : '#f6f2ea'
+        'white-bone' : '#f6f2ea',
+        'button-color' : '#d9501f'
       },
       fontFamily: {
         'poppins' : ['Poppins']

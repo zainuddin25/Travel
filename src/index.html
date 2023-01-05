@@ -52,12 +52,30 @@
         <!-- Hero -->
         <div class="w-full h-screen bg-cover bg-center" style="background-image: url('../assets/background/background.png');">
             <div class="container mx-auto px-8 flex justify-start items-center h-full">
-                <div class="w-2/4 bg-teal-500">
-                    <h1>Hallo</h1>
+                <div class="w-2/4">
+                    <p class="text-sm uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <h1 class="text-4xl font-bold my-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus aspernatur nam quod</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid sequi non accusantium. Non tenetur obcaecati quisquam sint ab quo suscipit accusamus incidunt exercitationem. Asperiores facilis delectus sapiente totam, a perferendis.</p>
+                    <div class="flex gap-4">
+                        <button class="text-sm px-10 py-3 bg-button-color text-white-bone rounded-full mt-4">Find Now</button>
+                        <button class="text-sm px-10 py-3 bg-transparent border-2 border-button-color rounded-full mt-4 flex items-center gap-2 text-button-color hover:bg-button-color hover:text-white-bone duration-300" onclick="watchVideo()">
+                            <i class="fa-regular fa-circle-play"></i>
+                            Watch Demo
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-        <h1>Hallo</h1>
+        
+        <!-- Video -->
+        <div class="w-screen h-screen fixed bg-black/80 top-0 justify-center items-center backdrop-blur-sm hidden" id="video">
+            <video controls width="600" height="auto">
+                <source src="../assets/video/MENTAHAN MEME RICKROLL (HD).mp4" type="video/mp4">
+            </video>
+            <button class="absolute top-6 right-[42px]" onclick="closeVideo()">
+                <i class="fa-regular fa-circle-xmark text-2xl text-white-bone"></i>
+            </button>
+        </div>
 
         <!-- Javascript -->
         <script>
@@ -105,6 +123,14 @@
                 document.getElementById("iconClose").style.display = 'none'
                 document.getElementById("iconSearch").style.display = 'block'
                 document.getElementById("iconSearch").style.padding = '8px'
+            }
+
+            function watchVideo() {
+                document.getElementById("video").style.display = "flex"
+            }
+
+            function closeVideo() {
+                document.getElementById("video").style.display = "none"
             }
 
         </script>
