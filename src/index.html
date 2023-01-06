@@ -13,7 +13,7 @@
     <body class="bg-white-bone font-poppins" id="right-scrool">
         
         <!-- Header -->
-        <div class="w-full h-[70px] bg-transparent text-white flex items-center px-8 justify-between fixed" id="navbar">
+        <div class="w-full h-[70px] bg-transparent text-white flex items-center px-8 justify-between fixed z-10" id="navbar">
             <h1 class="text-2xl font-bold" id="title">Traveling</h1>
             <div class="hidden lg:block">
                 <ul class="flex items-center gap-6">
@@ -53,9 +53,9 @@
         <div class="w-full h-screen bg-cover bg-center" style="background-image: url('../assets/background/background.png');">
             <div class="container mx-auto px-8 flex justify-start items-center h-full">
                 <div class="w-2/4">
-                    <p class="text-sm uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="text-sm uppercase text-button-color font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <h1 class="text-4xl font-bold my-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus aspernatur nam quod</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid sequi non accusantium. Non tenetur obcaecati quisquam sint ab quo suscipit accusamus incidunt exercitationem. Asperiores facilis delectus sapiente totam, a perferendis.</p>
+                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid sequi non accusantium. Non tenetur obcaecati quisquam sint ab quo suscipit accusamus incidunt exercitationem. Asperiores facilis delectus sapiente totam, a perferendis.</p>
                     <div class="flex gap-4">
                         <button class="text-sm px-10 py-3 bg-button-color text-white-bone rounded-full mt-4">Find Now</button>
                         <button class="text-sm px-10 py-3 bg-transparent border-2 border-button-color rounded-full mt-4 flex items-center gap-2 text-button-color hover:bg-button-color hover:text-white-bone duration-300" onclick="watchVideo()">
@@ -75,6 +75,40 @@
             <button class="absolute top-6 right-[42px]" onclick="closeVideo()">
                 <i class="fa-regular fa-circle-xmark text-2xl text-white-bone"></i>
             </button>
+        </div>
+
+        <!-- Destination -->
+        <div class="w-screen h-screen flex justify-center items-center">
+            <div class="grid grid-cols-4 gap-4">
+                <div class="border-2 border-white-bone hover:border-black w-[300px] text-center py-10 rounded-lg">
+                    <i class="fa-solid fa-plane-departure text-2xl border-2 px-4 py-[19px] border-black rounded-full hover:text-white hover:bg-black duration-200 hover:border-white-bone"></i>
+                    <div class="w-3/4 mx-auto mt-4">
+                        <h1 class="font-semibold">Lorem Ipsum</h1>
+                        <p class="text-xs mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="border-2 border-black w-[300px] text-center py-10 rounded-lg">
+                    <i class="fa-solid fa-plane-departure text-2xl border-2 px-4 py-[19px] border-black rounded-full hover:text-white hover:bg-black duration-200 hover:border-white-bone"></i>
+                    <div class="w-3/4 mx-auto mt-4">
+                        <h1 class="font-semibold">Lorem Ipsum</h1>
+                        <p class="text-xs mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="border-2 border-black w-[300px] text-center py-10 rounded-lg">
+                    <i class="fa-solid fa-plane-departure text-2xl border-2 px-4 py-[19px] border-black rounded-full hover:text-white hover:bg-black duration-200 hover:border-white-bone"></i>
+                    <div class="w-3/4 mx-auto mt-4">
+                        <h1 class="font-semibold">Lorem Ipsum</h1>
+                        <p class="text-xs mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="border-2 border-black w-[300px] text-center py-10 rounded-lg">
+                    <i class="fa-solid fa-plane-departure text-2xl border-2 px-4 py-[19px] border-black rounded-full hover:text-white hover:bg-black duration-200 hover:border-white-bone"></i>
+                    <div class="w-3/4 mx-auto mt-4">
+                        <h1 class="font-semibold">Lorem Ipsum</h1>
+                        <p class="text-xs mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Javascript -->
