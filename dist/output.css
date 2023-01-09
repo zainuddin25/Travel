@@ -1196,6 +1196,18 @@ body::-webkit-scrollbar {
     width: 300px;
   }
 
+  .xl\:w-full {
+    width: 100%;
+  }
+
+  .xl\:w-\[\] {
+    width: ;
+  }
+
+  .xl\:w-\[3\] {
+    width: 3;
+  }
+
   .xl\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
